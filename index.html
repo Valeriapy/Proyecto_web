@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMAF - Mueblería de Melamina</title>
+    <meta name="description" content="MOMAF - Mueblería de Melamina ofrece una variedad de muebles de alta calidad hechos a medida.">
+    <meta name="keywords" content="Muebles de Melamina, Mueblería, Carpintero, Visita a Domicilio">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flatpickr/flatpickr.min.css">
+    <script src="flatpickr/flatpickr.min.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Sección de Bienvenida -->
+    <div id="bienvenida" class="bienvenida">
+        <h1>Bienvenidos a MOMAF <br> Somos Fabricantes</h1>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div id="contenido-principal" class="contenido-principal oculto">
+        <header>
+            <h1>MOMAF - Mueblería de Melamina</h1>
+            <nav>
+                <ul>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <!-- <li><a href="#visita-carpintero">Visita del Carpintero</a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <section id="galeria" class="seccion">
+            <h2>Galería</h2>
+            <div class="galeria">
+                <!-- Las imágenes se añadirán dinámicamente -->
+            </div>
+        </section>
+
+        <section id="ubicacion" class="seccion">
+            <h2>Ubicación</h2>
+            <div id="map"></div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <!-- Formulario para enviar datos a Formspree -->
+            <form id="contacto-form" action="https://formspree.io/f/xdknnzkw" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/MOMAF"><img src="images/facebook .png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/MOMAF"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com/MOMAF"><img src="images/logotipos.png" alt="Twitter"></a>
+            </div>
+        </section>
+
+        <!--
+        <section id="visita-carpintero" class="seccion">
+            <h2>Solicitar Visita del Carpintero</h2>
+            <form id="solicitud-visita-form">
+                <label for="nombre-cliente">Nombre:</label>
+                <input type="text" id="nombre-cliente" name="nombre-cliente" required>
+                <label for="fecha-visita">Fecha de Visita:</label>
+                <input type="text" id="fecha-visita" name="fecha-visita" required>
+                <label for="hora-visita">Hora de Visita:</label>
+                <input type="time" id="hora-visita" name="hora-visita" required>
+                <button type="submit">Solicitar Visita</button>
+            </form>
+        </section>
+        -->
+
+        <footer>
+            <p>&copy; 2024 Rafael Bejarano. Todos los derechos reservados.</p>
+        </footer>
+
+        <!-- Modal para el lightbox -->
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgModal">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/1150355005" class="whatsapp-button" target="_blank" aria-label="Chat en WhatsApp">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- Incluir la API de Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+</body>
+</html>
